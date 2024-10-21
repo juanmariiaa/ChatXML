@@ -1,48 +1,62 @@
 package org.juanmariiaa.model.domain;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 import java.util.Objects;
 
-@XmlRootElement (name = "user")
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlRootElement(name = "user")
 public class User implements Serializable {
-    private static final long serialVersionID = 1L;
-    private String nickname;
+    private String name;
+    private int currentRoom;
 
-    public User(){
-
+    public User(String name) {
+        this.name = name;
+        this.currentRoom = 0;
     }
 
-    public User(String nickname){
-        this.nickname = nickname;
-    }
-    @XmlElement(name = "nickname")
-    public String getNickname() {
-        return nickname;
+    public User() {
+        this.name = "";
+        this.currentRoom = 0;
     }
 
-    public void setNickname(String nickname) {
-        this.nickname = nickname;
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getCurrentRoom() {
+        return currentRoom;
+    }
+
+    public void setCurrentRoom(int currentRoom) {
+        this.currentRoom = currentRoom;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof User)) return false;
+        if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return Objects.equals(nickname, user.nickname);
+        return Objects.equals(name, user.name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(nickname);
+        return Objects.hash(name);
     }
 
     @Override
     public String toString() {
         return "User{" +
-                "nickname='" + nickname + '\'' +
+                "name='" + name + '\'' +
+                ", currentRoom=" + currentRoom +
                 '}';
     }
 }
