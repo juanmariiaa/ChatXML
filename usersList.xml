@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<users>
+    <user>
+        <name>Juan</name>
+        <currentRoom>0</currentRoom>
+    </user>
+    <user>
+        <name>Pedro</name>
+        <currentRoom>0</currentRoom>
+    </user>
+    <user>
+        <name>Ana</name>
+        <currentRoom>0</currentRoom>
+    </user>
+</users>
