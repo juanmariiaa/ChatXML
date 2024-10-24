@@ -4,15 +4,14 @@ import javax.xml.bind.annotation.*;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 @XmlRootElement(name = "room")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Room {
 
     private String roomName;
+    private User administrator;  // Nuevo atributo: el creador/administrador de la sala
 
-    // Lista de mensajes que se han enviado en la sala
     @XmlElementWrapper(name = "messages")
     @XmlElement(name = "message")
     private List<Message> messages;
@@ -22,9 +21,10 @@ public class Room {
         this.messages = new ArrayList<>();
     }
 
-    // Constructor con parámetros
-    public Room(String roomName) {
+    // Constructor con parámetros (incluyendo administrador)
+    public Room(String roomName, User administrator) {
         this.roomName = roomName;
+        this.administrator = administrator;
         this.messages = new ArrayList<>();
     }
 
@@ -35,6 +35,14 @@ public class Room {
 
     public void setRoomName(String roomName) {
         this.roomName = roomName;
+    }
+
+    public User getAdministrator() {
+        return administrator;
+    }
+
+    public void setAdministrator(User administrator) {
+        this.administrator = administrator;
     }
 
     public List<Message> getMessages() {
@@ -54,7 +62,8 @@ public class Room {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Room: ").append(roomName).append("\n");
+        sb.append("Room: ").append(roomName).append("\n")
+                .append("Administrator: ").append(administrator.getUsername()).append("\n");
         for (Message message : messages) {
             sb.append(message.toString()).append("\n");
         }

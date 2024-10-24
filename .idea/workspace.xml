@@ -5,30 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ec8ffbbe-65c4-4b5e-a87f-b9791e515de4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/dao/MessageDataManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/dao/MessageWrapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/dao/RoomDataManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/dao/RoomWrapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/dao/UserDataManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/dao/UserWrapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/domain/Message.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/test/test3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/others/SingletonUserSession.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/test/test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libro.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/XML/LocalTimeAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/XML/LocalDateTimeAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/dao/RoomDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/dao/RoomsDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/dao/UsersListDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/domain/Config.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/domain/Msg.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/domain/MsgsList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/dao/MessageDataManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/dao/MessageDataManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/dao/RoomDataManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/dao/RoomDataManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/dao/UserDataManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/dao/UserDataManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/dao/UserWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/dao/UserWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/domain/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/domain/Message.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/domain/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/domain/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/domain/RoomsList.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/domain/UsersList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/test/test1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/test/test2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/test/test3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/usersList.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +51,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.test.executor": "Run",
     "Application.test1.executor": "Run",
     "Application.test2.executor": "Run",
     "Application.test3.executor": "Run",
@@ -73,8 +66,8 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -86,6 +79,19 @@
   <component name="RunManager">
     <configuration default="true" type="Application" factoryName="Application">
       <module name="ChatXML" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.juanmariiaa.test.test" />
+      <module name="ChatXML" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.juanmariiaa.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -118,7 +124,22 @@
     <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
-        <option name="myRunnerSettings" />
+        <option name="myRunnerSettings">
+          <MavenRunnerSettings>
+            <option name="delegateBuildToMaven" value="false" />
+            <option name="environmentProperties">
+              <map />
+            </option>
+            <option name="jreName" value="#USE_PROJECT_JDK" />
+            <option name="mavenProperties">
+              <map />
+            </option>
+            <option name="passParentEnv" value="true" />
+            <option name="runMavenInBackground" value="true" />
+            <option name="skipTests" value="false" />
+            <option name="vmOptions" value="--add-opens java.base/java.util=ALL-UNNAMED" />
+          </MavenRunnerSettings>
+        </option>
         <option name="myRunnerParameters">
           <MavenRunnerParameters>
             <option name="cmdOptions" />
@@ -126,10 +147,7 @@
               <set />
             </option>
             <option name="goals">
-              <list>
-                <option value="--add-opens" />
-                <option value="org.juanmariiaa.model.domain=ALL-UNNAMED" />
-              </list>
+              <list />
             </option>
             <option name="multimoduleDir" />
             <option name="pomFileName" />
@@ -146,11 +164,18 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.test" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
+        <option value="jdk-15.0.2-corretto-15.0.2-4caba194b151-9bc2d75a" />
         <option value="jdk-19.0.2-corretto-19.0.2-4caba194b151-48ba4555" />
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
         <option value="jdk-22-openjdk-22-4caba194b151-f504ca98" />
       </set>
     </attachedChunks>
@@ -166,11 +191,21 @@
       <workItem from="1729237306629" duration="4799000" />
       <workItem from="1729492947673" duration="1904000" />
       <workItem from="1729519614066" duration="2080000" />
-      <workItem from="1729778050059" duration="4025000" />
+      <workItem from="1729778050059" duration="7796000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.reflect.InaccessibleObjectException" package="java.lang.reflect" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

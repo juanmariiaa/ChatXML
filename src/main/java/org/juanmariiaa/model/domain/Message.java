@@ -4,6 +4,7 @@ import org.juanmariiaa.XML.LocalDateTimeAdapter;
 import javax.xml.bind.annotation.*;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.time.LocalDateTime;
+import java.util.Collections;
 import java.util.List;
 
 
@@ -17,9 +18,7 @@ public class Message {
     @XmlElementWrapper(name = "receivers")
     @XmlElement(name = "receiver")
     private List<String> receivers;
-
     private String content;
-
     // Adaptador para la fecha y hora
     @XmlJavaTypeAdapter(LocalDateTimeAdapter.class)
     private LocalDateTime timestamp;
@@ -28,13 +27,23 @@ public class Message {
     public Message() {
     }
 
-    // Constructor con múltiples destinatarios
+    // Constructor para múltiples destinatarios (mensajes en grupo)
     public Message(String sender, List<String> receivers, String content, LocalDateTime timestamp) {
         this.sender = sender;
         this.receivers = receivers;
         this.content = content;
         this.timestamp = timestamp;
     }
+
+    // Constructor para un solo destinatario (mensaje directo)
+    public Message(String sender, String receiver, String content, LocalDateTime timestamp) {
+        this.sender = sender;
+        this.receivers = Collections.singletonList(receiver);  // Solo un receptor
+        this.content = content;
+        this.timestamp = timestamp;
+    }
+
+
 
     // Getters y Setters
     public String getSender() {
