@@ -47,7 +47,7 @@ public class UserDataManager {
         }
     }
 
-    // Método para crear una sala y asignar un administrador
+    /*// Método para crear una sala y asignar un administrador
     public void createRoom(String username, String roomName) {
         User user = getUserByUsername(username);
         if (user != null) {
@@ -57,7 +57,7 @@ public class UserDataManager {
         } else {
             System.out.println("Usuario no encontrado.");
         }
-    }
+    }*/
 
     // Método para buscar un usuario por su nombre de usuario
     public User getUserByUsername(String username) {

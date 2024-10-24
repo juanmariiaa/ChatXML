@@ -5,40 +5,41 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-@XmlAccessorType(XmlAccessType.FIELD)  // JAXB accede directamente a los campos
+@XmlAccessorType(XmlAccessType.FIELD) // Use FIELD access to avoid conflicts with getters
 @XmlRootElement(name = "user")
 public class User implements Serializable {
 
+    @XmlElement(name = "username")  // XML element for the username
     private String username;
+
+    @XmlElement(name = "password")  // XML element for the password
     private String password;
+
+    @XmlElement(name = "firstName")  // XML element for the first name
     private String firstName;
+
+    @XmlElement(name = "lastName")  // XML element for the last name
     private String lastName;
 
-    @XmlElementWrapper(name = "friends")
-    @XmlElement(name = "friend")
+    @XmlElementWrapper(name = "friends")  // Wrap the friends list in a <friends> element
+    @XmlElement(name = "friend")  // Define each user friend as a <friend> element
     private List<User> friends;
 
-    @XmlElementWrapper(name = "createdRooms")  // Lista de salas creadas por el usuario
-    @XmlElement(name = "room")
-    private List<Room> roomsCreadas;
-
-    // Constructor vacío, necesario para JAXB
+    // Default constructor
     public User() {
         this.friends = new ArrayList<>();
-        this.roomsCreadas = new ArrayList<>();
     }
 
-    // Constructor con parámetros
+    // Constructor with parameters
     public User(String username, String password, String firstName, String lastName) {
         this.username = username;
         this.password = password;
         this.firstName = firstName;
         this.lastName = lastName;
         this.friends = new ArrayList<>();
-        this.roomsCreadas = new ArrayList<>();
     }
 
-    // Getters y Setters
+    // Getters and Setters
     public String getUsername() {
         return username;
     }
@@ -79,25 +80,12 @@ public class User implements Serializable {
         this.friends = friends;
     }
 
-    public List<Room> getRoomsCreadas() {
-        return roomsCreadas;
-    }
-
-    public void setRoomsCreadas(List<Room> roomsCreadas) {
-        this.roomsCreadas = roomsCreadas;
-    }
-
-    // Método para agregar un amigo
+    // Method to add a friend
     public void addFriend(User friend) {
         this.friends.add(friend);
     }
 
-    // Método para agregar una sala creada
-    public void addCreatedRoom(Room room) {
-        this.roomsCreadas.add(room);
-    }
-
-    // Método toString para representar el usuario como cadena
+    // toString method
     @Override
     public String toString() {
         return "User{" +
@@ -105,11 +93,10 @@ public class User implements Serializable {
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", friends=" + friends.size() +
-                ", createdRooms=" + roomsCreadas.size() +
                 '}';
     }
 
-    // Método equals y hashCode para comparar usuarios (puede ser útil)
+    // equals and hashCode methods
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<user>
+    <username>johndoe</username>
+    <password>password123</password>
+    <firstName>John</firstName>
+    <lastName>Doe</lastName>
+    <friends>
+        <friend>
+            <username>friend1</username>
+            <password>friendpass1</password>
+            <firstName>Friend</firstName>
+            <lastName>One</lastName>
+            <friends/>
+        </friend>
+        <friend>
+            <username>friend2</username>
+            <password>friendpass2</password>
+            <firstName>Friend</firstName>
+            <lastName>Two</lastName>
+            <friends/>
+        </friend>
+    </friends>
+</user>

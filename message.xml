@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<message>
+    <sender>user1</sender>
+    <receiver>user2</receiver>
+    <content>Hello, User 2!</content>
+    <timestamp>2024-10-24 20:52:39</timestamp>
+</message>

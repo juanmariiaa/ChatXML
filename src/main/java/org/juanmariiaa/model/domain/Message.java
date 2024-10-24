@@ -1,51 +1,43 @@
 package org.juanmariiaa.model.domain;
 
-import org.juanmariiaa.XML.LocalDateTimeAdapter;
 import javax.xml.bind.annotation.*;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import java.time.LocalDateTime;
-import java.util.Collections;
-import java.util.List;
+import java.io.Serializable;
 
-
+@XmlAccessorType(XmlAccessType.FIELD) // Use FIELD access to avoid conflicts with getters
 @XmlRootElement(name = "message")
-@XmlAccessorType(XmlAccessType.FIELD)
-public class Message {
+public class Message implements Serializable {
 
-    private String sender;  // El remitente del mensaje
+    @XmlElement(name = "sender") // XML element for the sender
+    private String sender;
 
-    // Lista de destinatarios
-    @XmlElementWrapper(name = "receivers")
-    @XmlElement(name = "receiver")
-    private List<String> receivers;
+    @XmlElement(name = "receiver") // XML element for the receiver
+    private String receiver;
+
+    @XmlElement(name = "content") // XML element for the content of the message
     private String content;
-    // Adaptador para la fecha y hora
-    @XmlJavaTypeAdapter(LocalDateTimeAdapter.class)
-    private LocalDateTime timestamp;
 
-    // Constructor vacío para JAXB
+    @XmlElement(name = "timestamp") // XML element for the timestamp
+    private String timestamp;
+
+    // Default constructor
     public Message() {
+        this.timestamp = generateTimestamp(); // Generate timestamp on creation
     }
 
-    // Constructor para múltiples destinatarios (mensajes en grupo)
-    public Message(String sender, List<String> receivers, String content, LocalDateTime timestamp) {
+    // Constructor with parameters
+    public Message(String sender, String receiver, String content) {
         this.sender = sender;
-        this.receivers = receivers;
+        this.receiver = receiver;
         this.content = content;
-        this.timestamp = timestamp;
+        this.timestamp = generateTimestamp(); // Generate timestamp on creation
     }
 
-    // Constructor para un solo destinatario (mensaje directo)
-    public Message(String sender, String receiver, String content, LocalDateTime timestamp) {
-        this.sender = sender;
-        this.receivers = Collections.singletonList(receiver);  // Solo un receptor
-        this.content = content;
-        this.timestamp = timestamp;
+    // Method to generate a timestamp in the desired format
+    private String generateTimestamp() {
+        return new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new java.util.Date());
     }
 
-
-
-    // Getters y Setters
+    // Getters and Setters
     public String getSender() {
         return sender;
     }
@@ -54,12 +46,12 @@ public class Message {
         this.sender = sender;
     }
 
-    public List<String> getReceivers() {
-        return receivers;
+    public String getReceiver() {
+        return receiver;
     }
 
-    public void setReceivers(List<String> receivers) {
-        this.receivers = receivers;
+    public void setReceiver(String receiver) {
+        this.receiver = receiver;
     }
 
     public String getContent() {
@@ -70,22 +62,38 @@ public class Message {
         this.content = content;
     }
 
-    public LocalDateTime getTimestamp() {
+    public String getTimestamp() {
         return timestamp;
     }
 
-    public void setTimestamp(LocalDateTime timestamp) {
+    public void setTimestamp(String timestamp) {
         this.timestamp = timestamp;
     }
 
-    // Método toString
+    // toString method
     @Override
     public String toString() {
         return "Message{" +
                 "sender='" + sender + '\'' +
-                ", receivers=" + receivers +
+                ", receiver='" + receiver + '\'' +
                 ", content='" + content + '\'' +
-                ", timestamp=" + timestamp +
+                ", timestamp='" + timestamp + '\'' +
                 '}';
+    }
+
+    // equals and hashCode methods
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Message message = (Message) obj;
+        return sender.equals(message.sender) && receiver.equals(message.receiver);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = sender.hashCode();
+        result = 31 * result + receiver.hashCode();
+        return result;
     }
 }
