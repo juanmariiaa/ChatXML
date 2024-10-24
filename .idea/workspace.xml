@@ -5,12 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ec8ffbbe-65c4-4b5e-a87f-b9791e515de4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/dao/UserDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/dao/UsersListDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/test/test2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/dao/RoomDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/dao/RoomDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/dao/RoomsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/dao/RoomsDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/domain/UsersList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/domain/UsersList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/dao/MessageDataManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/dao/MessageWrapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/dao/RoomDataManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/dao/RoomWrapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/dao/UserDataManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/dao/UserWrapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/domain/Message.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/test/test3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/XML/LocalTimeAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/XML/LocalDateTimeAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/dao/RoomDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/dao/RoomsDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/dao/UsersListDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/domain/Config.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/domain/Msg.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/domain/MsgsList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/domain/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/domain/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/domain/RoomsList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/model/domain/UsersList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/test/test1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/juanmariiaa/test/test2.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +61,7 @@
   "keyToString": {
     "Application.test1.executor": "Run",
     "Application.test2.executor": "Run",
+    "Application.test3.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -65,6 +84,26 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="Application" factoryName="Application">
+      <module name="ChatXML" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <shortenClasspath name="NONE" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerCypress">
+      <node-interpreter value="project" />
+      <cypress-options value="-q" />
+      <envs />
+      <scope-kind value="TEST_FILE" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -75,6 +114,37 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="cmdOptions" />
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="--add-opens" />
+                <option value="org.juanmariiaa.model.domain=ALL-UNNAMED" />
+              </list>
+            </option>
+            <option name="multimoduleDir" />
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="projectsCmdOptionValues">
+              <list />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
     </configuration>
   </component>
   <component name="SharedIndexes">
@@ -96,6 +166,7 @@
       <workItem from="1729237306629" duration="4799000" />
       <workItem from="1729492947673" duration="1904000" />
       <workItem from="1729519614066" duration="2080000" />
+      <workItem from="1729778050059" duration="4025000" />
     </task>
     <servers />
   </component>

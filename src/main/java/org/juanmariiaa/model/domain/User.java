@@ -2,61 +2,63 @@ package org.juanmariiaa.model.domain;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
-import java.util.Objects;
 
-@XmlAccessorType(XmlAccessType.FIELD)
+
+@XmlAccessorType(XmlAccessType.FIELD)  // JAXB accede directamente a los campos
 @XmlRootElement(name = "user")
 public class User implements Serializable {
-    private String name;
-    private int currentRoom;
 
-    public User(String name) {
-        this.name = name;
-        this.currentRoom = 0;
-    }
+    private String username;
+    private String password;  // Podrías implementar un cifrado simple más adelante si es necesario
 
+    // Constructor vacío, necesario para JAXB
     public User() {
-        this.name = "";
-        this.currentRoom = 0;
     }
 
-    public String getName() {
-        return name;
+    // Constructor con parámetros
+    public User(String username, String password) {
+        this.username = username;
+        this.password = password;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    // Getters y Setters
+    public String getUsername() {
+        return username;
     }
 
-    public int getCurrentRoom() {
-        return currentRoom;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public void setCurrentRoom(int currentRoom) {
-        this.currentRoom = currentRoom;
+    public String getPassword() {
+        return password;
     }
 
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    // Método toString opcional para representar el usuario como cadena
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        User user = (User) o;
-        return Objects.equals(name, user.name);
+    public String toString() {
+        return "User{" +
+                "username='" + username + '\'' +
+                '}';
+    }
+
+    // Método equals y hashCode para comparar usuarios (puede ser útil)
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        User user = (User) obj;
+        return username.equals(user.username);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name);
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "name='" + name + '\'' +
-                ", currentRoom=" + currentRoom +
-                '}';
+        return username.hashCode();
     }
 }

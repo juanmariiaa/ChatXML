@@ -1,68 +1,63 @@
 package org.juanmariiaa.model.domain;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.*;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
-@XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "room")
-public class Room implements Serializable {
-    int idRoom;
+@XmlAccessorType(XmlAccessType.FIELD)
+public class Room {
 
-    @XmlElement(name = "msgs", type= MsgsList.class)
-    MsgsList msgList;
+    private String roomName;
 
-    public Room(int idRoom) {
-        this.idRoom = idRoom;
-        this.msgList = new MsgsList();
-    }
+    // Lista de mensajes que se han enviado en la sala
+    @XmlElementWrapper(name = "messages")
+    @XmlElement(name = "message")
+    private List<Message> messages;
 
+    // Constructor vacío, necesario para JAXB
     public Room() {
-        this.idRoom = 0;
-        this.msgList = new MsgsList();
+        this.messages = new ArrayList<>();
     }
 
-    public int getIdRoom() {
-        return idRoom;
+    // Constructor con parámetros
+    public Room(String roomName) {
+        this.roomName = roomName;
+        this.messages = new ArrayList<>();
     }
 
-    public void setIdRoom(int idRoom) {
-        this.idRoom = idRoom;
+    // Getters y Setters
+    public String getRoomName() {
+        return roomName;
     }
 
-    public MsgsList getMsgList() {
-        return msgList;
+    public void setRoomName(String roomName) {
+        this.roomName = roomName;
     }
 
-    public void setMsgList(MsgsList msgList) {
-        this.msgList = msgList;
+    public List<Message> getMessages() {
+        return messages;
     }
 
-    public void addMsg(Msg msg){
-        this.msgList.addMsg(msg);
+    public void setMessages(List<Message> messages) {
+        this.messages = messages;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Room room = (Room) o;
-        return idRoom == room.idRoom;
+    // Método para agregar un mensaje a la sala
+    public void addMessage(Message message) {
+        this.messages.add(message);
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(idRoom);
-    }
-
+    // Método toString para visualizar la sala y los mensajes
     @Override
     public String toString() {
-        return "Room{" +
-                "idRoom=" + idRoom +
-                ", msgList=" + msgList +
-                '}';
+        StringBuilder sb = new StringBuilder();
+        sb.append("Room: ").append(roomName).append("\n");
+        for (Message message : messages) {
+            sb.append(message.toString()).append("\n");
+        }
+        return sb.toString();
     }
 }
