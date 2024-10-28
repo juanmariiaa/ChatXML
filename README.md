@@ -29,17 +29,9 @@ Este proyecto es una **Aplicación de Mensajería Sincronizada** desarrollado co
 
 ## Diagrama de Clases
 
-![Diagrama de Clases](ruta/del/diagrama.png) <!-- Reemplaza esta línea con la ruta a tu diagrama de clases -->
+![Diagrama de Clases](/Documentation/Diagram.png) <!-- Reemplaza esta línea con la ruta a tu diagrama de clases -->
 
-## Instalación
 
-Para instalar y ejecutar la aplicación, sigue estos pasos:
-
-1. **Descarga:** Descarga el archivo `.rar` que estará disponible en la sección de **Releases**.
-
-2. **Ejecuta el archivo:** Ejecuta el archivo `Execute.bat` para iniciar la aplicación.
-
-3. **¡Disfruta!**
 
 ## Conclusiones
 

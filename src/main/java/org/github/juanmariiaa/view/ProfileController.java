@@ -1,10 +1,7 @@
 package org.github.juanmariiaa.view;
 
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -12,8 +9,6 @@ import javafx.scene.control.ListView;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
-import javafx.stage.Modality;
-import javafx.stage.Stage;
 import org.github.juanmariiaa.model.dao.UserDataManager;
 import org.github.juanmariiaa.model.domain.Friend;
 import org.github.juanmariiaa.model.domain.User;
@@ -127,7 +122,7 @@ public class ProfileController implements Initializable {
             user.setProfilePic(imagePath); // Update the user's profile picture path
             profileImageView.setImage(new Image(selectedFile.toURI().toString())); // Update the profile image view
             try {
-                UserDataManager.addUser(user); // Save changes to the database
+                UserDataManager.updateUser(user);
                 Utils.showPopUp("Success", "Profile Picture Changed", "Your profile picture has been updated.", Alert.AlertType.INFORMATION);
             } catch (Exception e) {
                 e.printStackTrace(); // Print stack trace on error

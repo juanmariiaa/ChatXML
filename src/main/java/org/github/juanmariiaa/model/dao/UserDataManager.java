@@ -3,7 +3,6 @@ package org.github.juanmariiaa.model.dao;
 import org.github.juanmariiaa.model.domain.Friend;
 import org.github.juanmariiaa.model.domain.User;
 import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Marshaller;
@@ -164,6 +163,27 @@ public class UserDataManager {
             }
         }
         throw new Exception("User not found.");
+    }
+
+    /**
+     * Updates the profile picture of an existing user in the XML file.
+     *
+     * @param user The user whose profile picture needs to be updated.
+     * @throws Exception If an error occurs during the update process.
+     */
+    public static void updateUser(User user) throws Exception {
+        List<User> users = getAllUsers();
+        for (User u : users) {
+            if (u.getUsername().equals(user.getUsername())) {
+                u.setProfilePic(user.getProfilePic());
+                u.setName(user.getName());
+                u.setLastName(user.getLastName());
+                u.setUsername(user.getUsername());
+                u.setPassword(user.getPassword());
+                break;
+            }
+        }
+        saveUsers(users);
     }
 
     /**
