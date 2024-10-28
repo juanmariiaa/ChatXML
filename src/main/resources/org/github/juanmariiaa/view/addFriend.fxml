@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="267.0" prefWidth="329.0" style="-fx-background-radius: 20; -fx-background-color: #fdfdf3;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.github.juanmariiaa.view.AddFriendController">
+   <children>
+      <Text layoutX="33.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Username:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <TextField fx:id="tfUsername" layoutX="30.0" layoutY="65.0" prefHeight="40.0" prefWidth="265.0" style="-fx-background-radius: 20;" />
+      <Button layoutX="29.0" layoutY="130.0" mnemonicParsing="false" onAction="#btAddFriend" prefHeight="40.0" prefWidth="272.0" style="-fx-background-radius: 20; -fx-background-color: #0e76a8;" text="Add as Friend" textAlignment="CENTER" textFill="WHITE">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="29.0" layoutY="192.0" mnemonicParsing="false" onAction="#close" prefHeight="40.0" prefWidth="272.0" style="-fx-background-radius: 20; -fx-background-color: #969696;" text="BACK" textAlignment="CENTER" textFill="WHITE">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</Pane>

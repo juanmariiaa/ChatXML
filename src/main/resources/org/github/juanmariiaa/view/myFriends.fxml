@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="592.0" prefWidth="362.0" style="-fx-background-color: #0e76a8; -fx-background-radius: 20;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.github.juanmariiaa.view.MyFriendsController">
+   <children>
+      <Pane prefHeight="70.0" prefWidth="362.0" style="-fx-background-color: #0e76a8;">
+         <children>
+            <ImageView fitHeight="70.0" fitWidth="88.0" layoutX="146.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../../../../IdeaProjects/TournamentManager/src/main/resources/org/juanmariiaa/Images/logo-no-bg.png" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="95.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="My Friends">
+               <font>
+                  <Font size="37.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <ListView fx:id="friendsListView" layoutX="35.0" layoutY="168.0" prefHeight="311.0" prefWidth="293.0" />
+      <Button fx:id="deleteSelectedFriendButton" layoutX="134.0" layoutY="527.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="96.0" style="-fx-background-radius: 20; -fx-background-color: #fdfdf3;" text="Delete Friend" />
+      <ImageView fx:id="switchToProfileImageView" fitHeight="41.0" fitWidth="42.0" layoutX="21.0" layoutY="23.0" onMouseClicked="#switchToChat" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/back.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>

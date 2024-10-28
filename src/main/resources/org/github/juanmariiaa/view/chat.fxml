@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="818.0" prefWidth="1166.0" style="-fx-background-color: #fdfdf3;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.github.juanmariiaa.view.ChatController">
+   <children>
+      <HBox layoutX="-4.0" prefHeight="818.0" prefWidth="1166.0">
+         <children>
+            <VBox prefHeight="818.0" prefWidth="448.0" style="-fx-background-color: #0e76a8;">
+               <children>
+                  <Pane prefHeight="840.0" prefWidth="261.0">
+                     <children>
+                        <Button layoutX="16.0" layoutY="22.0" mnemonicParsing="false" onAction="#switchToAddFriend" prefHeight="41.0" prefWidth="230.0" style="-fx-background-radius: 20; -fx-background-color: #fdfdf3;" text="Add new friend" textAlignment="CENTER">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button layoutX="16.0" layoutY="97.0" mnemonicParsing="false" onAction="#switchToHome" prefHeight="41.0" prefWidth="230.0" style="-fx-background-radius: 20; -fx-background-color: #fdfdf3;" text="Home" textAlignment="CENTER">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="btnAnalysis" layoutX="16.0" layoutY="174.0" mnemonicParsing="false" onAction="#analyzeChat" prefHeight="41.0" prefWidth="230.0" style="-fx-background-radius: 20; -fx-background-color: #fdfdf3;" text="Analysis" textAlignment="CENTER">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="btnDownloadChat" layoutX="16.0" layoutY="246.0" mnemonicParsing="false" onAction="#downloadChat" prefHeight="41.0" prefWidth="230.0" style="-fx-background-radius: 20; -fx-background-color: #fdfdf3;" text="Download chat" textAlignment="CENTER">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <ImageView fitHeight="27.0" fitWidth="38.0" layoutX="32.0" layoutY="104.0" onMouseClicked="#switchToHome" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/inicio.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="27.0" fitWidth="38.0" layoutX="32.0" layoutY="29.0" onMouseClicked="#switchToAddFriend" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/anadir.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="27.0" fitWidth="38.0" layoutX="32.0" layoutY="182.0" onMouseClicked="#analyzeChat" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/analisis-de-los-datos.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="27.0" fitWidth="38.0" layoutX="32.0" layoutY="255.0" onMouseClicked="#downloadChat" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/descargando.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btnSignOut" layoutX="13.0" layoutY="733.0" mnemonicParsing="false" onAction="#signOut" prefHeight="41.0" prefWidth="230.0" style="-fx-background-radius: 20; -fx-background-color: #fdfdf3;" text="Sign Out" textAlignment="CENTER">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button layoutX="16.0" layoutY="315.0" mnemonicParsing="false" onAction="#switchToProfile" prefHeight="41.0" prefWidth="230.0" style="-fx-background-radius: 20; -fx-background-color: #fdfdf3;" text="Profile" textAlignment="CENTER">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <ImageView fitHeight="27.0" fitWidth="38.0" layoutX="32.0" layoutY="322.0" onMouseClicked="#switchToProfile" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/profile.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </children>
+            </VBox>
+            <Pane prefHeight="818.0" prefWidth="505.0">
+               <children>
+                  <ListView fx:id="lvFriends" prefHeight="818.0" prefWidth="318.0" style="-fx-background-color: #fdfdf3;" />
+               </children>
+            </Pane>
+            <VBox prefHeight="818.0" prefWidth="773.0">
+               <children>
+                  <ScrollPane prefHeight="801.0" prefWidth="587.0">
+                     <content>
+                        <VBox fx:id="vbMessages" prefHeight="754.0" prefWidth="573.0" />
+                     </content>
+                  </ScrollPane>
+                  <Pane prefHeight="107.0" prefWidth="587.0">
+                     <children>
+                        <TextField fx:id="tfMessage" layoutY="14.0" onAction="#sendMessage" prefHeight="39.0" prefWidth="542.0" promptText="Write a message" style="-fx-background-radius: 20;" />
+                        <ImageView fx:id="ivSendMessage" fitHeight="27.0" fitWidth="33.0" layoutX="552.0" layoutY="20.0" onMouseClicked="#sendMessage" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/enviar-mensaje.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

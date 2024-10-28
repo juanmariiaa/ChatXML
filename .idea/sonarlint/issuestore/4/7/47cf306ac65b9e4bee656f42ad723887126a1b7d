@@ -1,0 +1,9 @@
+
+•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÄÀêšJ$8985c405-d16f-431e-b1f7-5ec186d2566c
+r	java:S106'"+Replace this use of System.out by a logger.(¦½“øüÿÿÿÿ8Ô–õ «2J$c953f27b-fc05-443c-b36f-0e7c70061c91
+m	java:S106+"+Replace this use of System.out by a logger.(¤Ø”Ý8Õ–õ «2J$82db526e-97be-4d10-ba0e-35e20fcbf488
+l	java:S106/"+Replace this use of System.out by a logger.( €‰+8Õ–õ «2J$519a1f2a-677b-45cc-905f-1c894eac7f5e
+m	java:S106;"+Replace this use of System.out by a logger.(×Â†Ú8×–õ «2J$d48937d9-9bc8-4e99-bcf6-19d0be801a3e
+‚	java:S899C";Do something with the "boolean" value returned by "delete".(‚ÜÓ¶úÿÿÿÿ8û¶Œ «2J$0bddba33-f80a-4932-a0e6-c4654cf5bf07
+–
+java:S4042C"NUse "java.nio.file.Files#delete" here for better messages on error conditions.(‚ÜÓ¶úÿÿÿÿ8û¶Œ «2J$126174a2-7ff4-4fac-b342-2af025c68599

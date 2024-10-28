@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<users>
+    <user>
+        <username>juan</username>
+        <name>Juan María</name>
+        <password>41716Juan-</password>
+        <lastName>Ariza Serrano</lastName>
+        <friends>
+            <username>roberto99</username>
+        </friends>
+        <friends>
+            <username>juan</username>
+        </friends>
+        <friends>
+            <username>juannn</username>
+        </friends>
+    </user>
+    <user>
+        <username>roberto99</username>
+        <name>roberto</name>
+        <password>41716Juan-</password>
+        <lastName>roberto</lastName>
+    </user>
+    <user>
+        <username>juannn</username>
+        <name>juan</name>
+        <password>41716Juan-</password>
+        <lastName>juan</lastName>
+        <friends>
+            <username>juannn</username>
+        </friends>
+        <friends>
+            <username>roberto99</username>
+        </friends>
+    </user>
+    <user>
+        <username>juan</username>
+        <name>Juan María</name>
+        <password>41716Juan-</password>
+        <lastName>Ariza Serrano</lastName>
+        <profilePic>C:\Users\ariza\Desktop\Chat\src\main\resources\org\github\juanmariiaa\Images\logo.jpg</profilePic>
+        <friends>
+            <username>roberto99</username>
+        </friends>
+        <friends>
+            <username>juan</username>
+        </friends>
+        <friends>
+            <username>juannn</username>
+        </friends>
+    </user>
+    <user>
+        <username>juan</username>
+        <name>Juan María</name>
+        <password>41716Juan-</password>
+        <lastName>Ariza Serrano</lastName>
+        <profilePic>C:\IdeaProjects\otros\MANEJADORDETORNEOS\src\main\resources\org\juanmariiaa\Images\logo-no-bg.png</profilePic>
+        <friends>
+            <username>roberto99</username>
+        </friends>
+        <friends>
+            <username>juan</username>
+        </friends>
+        <friends>
+            <username>juannn</username>
+        </friends>
+    </user>
+</users>

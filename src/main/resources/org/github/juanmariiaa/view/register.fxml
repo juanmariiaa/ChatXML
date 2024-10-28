@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="485.0" prefWidth="329.0" style="-fx-background-radius: 20; -fx-background-color: #fdfdf3;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.github.juanmariiaa.view.RegisterController">
+   <children>
+      <Text layoutX="33.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="33.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="34.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="34.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <TextField fx:id="tfName" layoutX="29.0" layoutY="61.0" prefHeight="25.0" prefWidth="265.0" style="-fx-background-radius: 20;" />
+      <TextField fx:id="tfLastName" layoutX="29.0" layoutY="119.0" prefHeight="25.0" prefWidth="265.0" style="-fx-background-radius: 20;" />
+      <TextField fx:id="tfUsername" layoutX="28.0" layoutY="175.0" prefHeight="25.0" prefWidth="265.0" style="-fx-background-radius: 20;" />
+      <Button layoutX="28.0" layoutY="289.0" mnemonicParsing="false" onAction="#btSignUp" prefHeight="40.0" prefWidth="272.0" style="-fx-background-radius: 20; -fx-background-color: #0e76a8;" text="Sign Up" textAlignment="CENTER" textFill="WHITE">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Text layoutX="124.0" layoutY="355.0" strokeType="OUTSIDE" strokeWidth="0.0" text="if you already have an account" textAlignment="CENTER" wrappingWidth="79.203125" />
+      <Separator layoutX="28.0" layoutY="311.0" prefHeight="110.0" prefWidth="93.0" />
+      <Separator layoutX="213.0" layoutY="311.0" onDragDetected="#btSignUp" prefHeight="110.0" prefWidth="87.0" />
+      <Button layoutX="28.0" layoutY="401.0" mnemonicParsing="false" onAction="#switchToLogin" prefHeight="40.0" prefWidth="272.0" style="-fx-background-radius: 20; -fx-background-color: #969696;" text="BACK" textAlignment="CENTER" textFill="WHITE">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <PasswordField fx:id="tfPassword" layoutX="29.0" layoutY="231.0" prefHeight="25.0" prefWidth="265.0" style="-fx-background-radius: 20;" />
+   </children>
+</Pane>
